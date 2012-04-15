@@ -60,6 +60,12 @@ arguments. The next element will be append in the root.
 
 Simply populates the current element with the arguments.
 
+``Wisdom:inject(domnode, ?where)``
+..................................
+
+Inject the root in a DOM node. ``where`` can be either ``'bottom'`` (the
+default), ``'top'``, ``'after'`` or ``'before'``.
+
 ``Wisdom:last``
 ...............
 
