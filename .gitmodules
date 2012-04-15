@@ -1,0 +1,6 @@
+[submodule "benchmark.js"]
+	path = benchmark.js
+	url = https://github.com/bestiejs/benchmark.js.git
+[submodule "vendors/sink-test"]
+	path = vendors/sink-test
+	url = https://github.com/ded/sink-test.git
