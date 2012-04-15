@@ -1,7 +1,7 @@
 Wisdom
 ======
 
-Wisdom tiny is a JavaScript library intended to simplify DOM construction. It's
+Wisdom is a tiny JavaScript library intended to simplify DOM construction. Its
 goal is to be used in projects who does not use templates to format HTML.
 
  * Really small (≈ 1.1KB minified + gziped)
@@ -28,32 +28,32 @@ root if there is no open element) by iterating over the passed arguments.
 
   * plain objects will be used to set attributes with the ``setter`` function,
 
-  * other things will be used as strings and appended.
+  * other arguments will be used as strings and appended.
 
 
 ``Wisdom(...)``
 ............
 
-Constructor. Populate the root with its arguments. Call it with or without the
-``new`` keyword.
+Constructor. Populate the root with its arguments. The ``new`` keyword is
+optionnal.
 
 ``Wisdom:<tagname>(...)``
 ..........................
 
-``<tagname>`` can be any HTML element name. Append an element to the parent and
-populate it with the arguments.
+Append an element to the parent and populate it with the arguments.
+``<tagname>`` can be any HTML element name.
 
 ``Wisdom:$(...)``
 .................
 
 'Close' the current element and populate its parent with the arguments. The
-next element will be append next to the current element.
+next element will be appended next to the current element.
 
 ``Wisdom:$$(...)``
 ..................
 
 Recursively close all opened elements and populates the root with the
-arguments. The next element will be append in the root.
+arguments. The next element will be appended in the root.
 
 ``Wisdom:_(...)``
 .................
@@ -69,23 +69,24 @@ default), ``'top'``, ``'after'`` or ``'before'``.
 ``Wisdom:last``
 ...............
 
-Reference to current element. This is the element who will be used as parent
-for the next content appended.
+Reference to the current element. This is the element who will be used as
+parent for the next content appended. Use it to store DOM references in your
+code.
 
 ``Wisdom.defineSetter(nameOrSetter, ?setter)``
 ..............................................
 
 Define the current setter to use, and returns the old one.
 
-If the first argument is a function, this function is used to do some DOM
-manipulation based on an object. The DOM element and the object to apply is
-passed as arguments to the function.
+If the first argument is a function, it is used to do some DOM manipulation
+based on an object. The DOM element and the object to apply is passed as
+arguments to the function.
 
 If the first argument is a string and the second is a function, it defines a
-'named' setter, which is immediately used and can be restored by calling this
-static method with the name anely.
+'named' setter, which is immediately defines the current setter and can be
+restored by calling this static method with the name alone.
 
-If the first argument is a string and no second argument is given, it define
+If the first argument is a string and no second argument is given, it defines
 the current setter to the previously registered named setter.
 
 
@@ -136,5 +137,5 @@ Example of usage using a MooTools setter:
 License
 -------
 
-This library is relaesed under an MIT license. See the file LICENSE.txt for the
+This library is relaesed under a MIT license. See the file LICENSE.txt for the
 full content of the license.
