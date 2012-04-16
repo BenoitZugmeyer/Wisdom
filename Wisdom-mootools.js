@@ -1,11 +1,9 @@
 /*
-  Wisdom-jquery
+  Wisdom-mootools
 
-  Author:
-    Benoît Zugmeyer - 2012
+  Benoît Zugmeyer - 2012
 
-  See:
-    http://simon.html5.org/html-elements
+  https://github.com/BenoitZugmeyer/Wisdom
 */
 
 /*jshint
@@ -49,4 +47,3 @@
 
 }));
 /* vim: set et ts=2 sw=2 sts=2: */
-

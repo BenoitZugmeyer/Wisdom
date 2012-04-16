@@ -66,6 +66,12 @@ Simply populates the current element with the arguments.
 Inject the root in a DOM node. ``where`` can be either ``'bottom'`` (the
 default), ``'top'``, ``'after'`` or ``'before'``.
 
+``Wisdom:clean(...)``
+.....................
+
+Empty the current root, so the instance is reusable (slightly quicker than
+recreating a new instance). Populate the new root with the arguments.
+
 ``Wisdom:last``
 ...............
 
@@ -120,9 +126,7 @@ Example of usage using a MooTools setter:
 ::
 
   Wisdom.defineSetter(function (dom, object) {
-
     document.id(dom).set(object);
-
   });
 
   new Wisdom()
@@ -131,7 +135,15 @@ Example of usage using a MooTools setter:
         .input({ type: 'text' }).$()
       .$()
       .input({ type: 'submit' }, 'Send').$()
-  .inject(document.body);
+    .inject(document.body);
+
+
+ToDo
+----
+
+* More examples
+
+* Benchmarks (vs template engines, plain innerHTML, DOM creation using popular frameworks)
 
 
 License

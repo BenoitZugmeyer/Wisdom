@@ -1,11 +1,9 @@
 /*
   Wisdom
 
-  Author:
-    Benoît Zugmeyer - 2012
+  Benoît Zugmeyer - 2012
 
-  See:
-    http://simon.html5.org/html-elements
+  https://github.com/BenoitZugmeyer/Wisdom
 */
 
 /*jshint
@@ -190,16 +188,17 @@
     },
 
     /*
-      Clean this instance. It will be reusable after that.
+      Clean this instance. It will be reusable after that. Populates the root
+      with the arguments.
 
-      ~ Wisdom: -> Wisdom
+      ~ Wisdom: ... -> Wisdom
     */
     clean: function () {
 
       this.last = null;
       this.root.length = 0;
 
-      return this;
+      return builder(this, arguments);
     },
 
     /*
