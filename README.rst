@@ -4,13 +4,13 @@ Wisdom
 Wisdom is a tiny JavaScript library intended to simplify DOM construction. Its
 goal is to be used in projects who does not use templates to format HTML.
 
- * Really small (≈ 1.1KB minified + gziped)
+* Really small (≈ 1.1KB minified + gziped)
 
- * Compact and easy to use
+* Compact and easy to use
 
- * Easy to read
+* Easy to read
 
- * Adaptable with any framework who does DOM manipulation
+* Adaptable with any framework who does DOM manipulation
 
 
 Documentation
@@ -19,16 +19,16 @@ Documentation
 All methods have the same signature: they populate the current element (or the
 root if there is no open element) by iterating over the passed arguments.
 
-  * falsy arguments will be ignored,
+* falsy arguments will be ignored,
 
-  * DOM elements and objects with an ``inject`` method will be appended,
+* DOM elements and objects with an ``inject`` method will be appended,
 
-  * array-like (objects with a length) will be iterated and their values will
-    be used to populate the element (splat effect),
+* array-like (objects with a length) will be iterated and their values will
+  be used to populate the element (splat effect),
 
-  * plain objects will be used to set attributes with the ``setter`` function,
+* plain objects will be used to set attributes with the ``setter`` function,
 
-  * other arguments will be used as strings and appended.
+* other arguments will be used as strings and appended.
 
 
 ``Wisdom(...)``
